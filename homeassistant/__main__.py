@@ -8,11 +8,17 @@ import faulthandler
 import os
 import sys
 import threading
+import logging
 
 from .backup_restore import restore_backup
 from .const import REQUIRED_PYTHON_VER, RESTART_EXIT_CODE, __version__
 
 FAULT_LOG_FILENAME = "home-assistant.log.fault"
+
+
+
+_LOGGER = logging.getLogger(__name__)
+_LOGGER.warning("My change, hello!! /Ylva")
 
 
 def validate_os() -> None:
